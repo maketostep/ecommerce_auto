@@ -84,7 +84,9 @@ export default function Contacts() {
           </Stack>
         </Stack>
       </Paper>
-
+      <Box>
+        <MapInit/>
+      </Box>
       {/* Форма */}
       <Paper
         elevation={3}
@@ -127,9 +129,6 @@ export default function Contacts() {
           </Stack>
         </form>
       </Paper>
-      <Box>
-          <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d398.6643869763413!2d37.70691285453396!3d55.581364374341824!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x414ab6f25af0cc49%3A0x652e20dce36c8ab7!2zQkVMR0VFINCR0JjQl9Cd0JXQoSDQmtCQ0KAg0JrQsNGI0LjRgNGB0LrQuNC5!5e0!3m2!1sru!2sse!4v1748458398070!5m2!1sru!2sse" width="600" height="450" allowFullScreen="" styles={{border:0}} loading="fast" referrerPolicy="no-referrer-when-downgrade"></iframe>
-        </Box>
     </Box>
   );
 }

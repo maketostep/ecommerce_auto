@@ -17,7 +17,7 @@ const modalStyle = {
   top: '50%',
   left: '50%',
   transform: 'translate(-50%, -50%)',
-  width: 400,
+  width: { xs: '90%', sm: 400 },
   bgcolor: 'background.paper',
   borderRadius: 2,
   boxShadow: 24,
@@ -43,14 +43,14 @@ export default function Item({ item }) {
           component="img"
           image={`img/${item.img}`}
           alt={item.title}
-          sx={{ height: 180, objectFit: 'cover' }}
+          sx={{ height: { xs: 180, sm: 200 }, objectFit: 'cover' }}
         />
         <CardContent sx={{ flexGrow: 1 }}>
           <Typography variant="h6" gutterBottom>
             {item.title}
           </Typography>
           <Typography variant="body2" color="text.secondary">
-            {item.desc.slice(0, 120)}...
+            {item.desc.slice(0, 200)}...
           </Typography>
           <Typography variant="h6" color="inherit" sx={{ mt: 1 }}>
             {item.price.toLocaleString()} ₽

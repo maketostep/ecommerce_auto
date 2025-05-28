@@ -1,6 +1,6 @@
 import React from 'react'
 import {Items} from '../src/components/Items'
-import {Typography} from '@mui/material'
+import {Container, Typography} from '@mui/material'
 
 export default function Home() {
     const cars = [
@@ -85,11 +85,11 @@ export default function Home() {
 
     ]
     return (
-        <div>
+        <Container sx={{ mt: 4 }}>
             <Typography variant="h4" align="center" gutterBottom>
                 Каталог
             </Typography>
-            <Items items={cars}/>
-        </div>
+            <Items items={cars} />
+        </Container>
     )
 }

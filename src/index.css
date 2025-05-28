@@ -3,11 +3,9 @@
 * {
     margin: 0;
     padding: 0;
-    background-image: url('./img/background.jpg') no-repeat;
 }
 
 body {
-    background-image: url('./img/background.jpg') no-repeat;
     color: #222;
     font-family: "Montserrat", sans-serif;
     font-weight: 300;
