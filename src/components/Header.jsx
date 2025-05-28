@@ -1,4 +1,5 @@
 import React from 'react'
+import { NavLink } from 'react-router'
 
 export default function Header() {
   return (
@@ -6,9 +7,15 @@ export default function Header() {
         <div>
             <span className='logo'> Car Staff</span>
             <ul className='nav'>
-              <li>Про нас</li>
+              <NavLink to="/" end>
+                <li>Главная</li>
+              </NavLink>
+              <NavLink to="/contacts" end>
               <li>Контакты</li>
+              </NavLink>
+              <NavLink to="/cabinet" end>
               <li>Кабинет</li>
+              </NavLink>
             </ul>
         </div>
 
