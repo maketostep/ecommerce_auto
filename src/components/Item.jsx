@@ -9,7 +9,8 @@ import {
   Modal,
   Box
 } from '@mui/material';
-import AddShoppingCartIcon from '@mui/icons-material/AddShoppingCart';
+import GradeOutlinedIcon from '@mui/icons-material/GradeOutlined';
+import GradeIcon from '@mui/icons-material/Grade';
 
 const modalStyle = {
   position: 'absolute',
@@ -25,8 +26,15 @@ const modalStyle = {
 
 export default function Item({ item }) {
   const [open, setOpen] = useState(false);
+  const [star, setStar] = useState(localStorage.getItem(item.id) || 'false');
   const handleOpen = () => setOpen(true);
   const handleClose = () => setOpen(false);
+
+  const handleStar = () => {
+    const changeState = star === 'false' ? 'true' : 'false'
+    localStorage.setItem(item.id, changeState);
+    setStar(changeState);
+  }
 
   return (
     <>
@@ -50,8 +58,8 @@ export default function Item({ item }) {
         </CardContent>
         <CardActions sx={{ justifyContent: 'space-between' }}>
           <Button color="inherit" size="small" onClick={handleOpen}>Подробнее</Button>
-          <Button color="inherit" size="small" startIcon={<AddShoppingCartIcon />}>
-            В корзину
+          <Button color="inherit" size="small" onClick={handleStar} startIcon={star === 'false' ? <GradeOutlinedIcon /> : <GradeIcon />}>
+            В избранное
           </Button>
         </CardActions>
       </Card>
