@@ -3,7 +3,7 @@ import React from 'react'
 export default function Header() {
   return (
     <header>
-        <div>
+        <div className='header__wrapper'>
             <span className='logo'> Car Staff</span>
             <ul className='nav'>
               <li>Про нас</li>
