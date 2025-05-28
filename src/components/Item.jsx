@@ -1,17 +1,15 @@
-import React, { Component } from 'react'
+import React, {Component} from 'react'
 
-export class Item extends Component {
-  render() {
+export default function Item(props) {
+
     return (
-      <div className='item'>
-        <img src={`img/${this.props.item.img}`} />
-        <h2>{this.props.item.title}</h2>
-        <p>{this.props.item.desc}</p>
-        <b>{this.props.item.price} ₽</b>
-        <div className='add-to-cart'> + </div>
-      </div>
+        <div className='item'>
+            <img src={`img/${props.item.img}`}/>
+            <h2>{props.item.title}</h2>
+            <p>{props.item.desc}</p>
+            <b>{props.item.price} ₽</b>
+            <div className='add-to-cart'> +</div>
+        </div>
     )
-  }
-}
 
-export default Item
+}
