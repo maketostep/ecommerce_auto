@@ -9,11 +9,14 @@ import LogoCar from './img/logo.png'
 export default function App() {
   
   return (
-      <Container className='wrapper' sx={{alignItems: 'center'}}>
+    <>
+      <Container className='wrapper' sx={{textAlign: 'center'}}>
         <img src={LogoCar} style={{width: '50%', height:'50%', margin: '0 auto'}}></img>
         <Header />
           <Outlet />
-        <Footer />
+        
       </Container>
+      <Footer />
+      </>
     )
 }

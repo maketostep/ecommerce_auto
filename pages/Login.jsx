@@ -40,7 +40,7 @@ export default function Login() {
   return (
     <Box
       sx={{
-        height: '100vh',
+        height: '50vh',
         backgroundColor: 'transparent',
         display: 'flex',
         justifyContent: 'center',
@@ -75,7 +75,7 @@ export default function Login() {
               fullWidth
               required
             />
-            <Button type="submit" variant="contained" color="primary">
+            <Button type="submit" variant="contained" color="inherit">
               Войти
             </Button>
           </Stack>

@@ -1,7 +1,7 @@
 import React from 'react';
 import { AppBar, Toolbar, Typography, Box, Button, Stack } from '@mui/material';
 import { NavLink } from 'react-router';
-import LogoCar from '../img/logo.png'
+
 const navItems = [
   { label: 'Главная', to: '/' },
   { label: 'Контакты', to: '/contacts' },
@@ -20,7 +20,7 @@ const Header = () => {
         mb: 4,
       }}
     >
-      <Toolbar sx={{ justifyContent: 'space-between' }}>
+      <Toolbar sx={{ justifyContent: 'center', alignItems: 'center' }}>
 
         <Stack direction="row" spacing={2}>
           {navItems.map((item) => (
