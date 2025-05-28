@@ -3,12 +3,10 @@ import Header from './components/Header';
 import Footer from './components/Footer';
 import { Items } from './components/Items';
 
-class App extends React.Component {
-  constructor(props) {
-    super(props)
-    this.state = {
-      items: [
-        {
+
+export default function App() {
+  const cars = [
+    {
           id: 1,
           title: 'Hyundai Elantra',
           img: 'hyundai-elantra.webp',
@@ -50,18 +48,12 @@ class App extends React.Component {
           category: 'best-cars',
           price: '2390000'
         },
-      ]
-    }
-  }
-  render() {
-    return (
+  ]
+  return (
       <div className='wrapper'>
         <Header />
-        <Items items={this.state.items}/>
+        <Items items={cars}/>
         <Footer />
       </div>
     )
-  }
 }
-
-export default App
